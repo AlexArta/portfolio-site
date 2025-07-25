@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F8F8;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Hero text overlay styles */
+.hero-text-overlay {
+    position: absolute;
+    font-size: clamp(3rem, 10vw, 10rem);
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 0.8;
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.hero-text-main {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(3rem, 10vw, 10rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 0.8;
+}
+
+.hero-text-accent {
+    color: #DDAA33;
+}
+
+.section-title-bg {
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.card-panel {
+    background-color: #FFFFFF;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.card-panel-accent {
+    background-color: #DDAA33;
+    color: #FFFFFF;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #F0F0F0;
+    border: 1px solid #D0D0D0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #DDAA33;
+    box-shadow: 0 0 0 3px rgba(221, 170, 51, 0.3);
+}
+
+.contact-form button {
+    background-color: #DDAA33;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #C1952B;
+    box-shadow: 0 4px 10px rgba(221, 170, 51, 0.4);
+}
+
+.scroll-down-arrow {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Scroll Reveal Animations */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-element.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skill Progress Bar */
+.skill-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 0.25rem;
+    height: 0.75rem;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    background-color: #DDAA33;
+    height: 100%;
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+.skill-bar-fill.active {
+    /* Width will be set by JS */
+}
+
+/* Project Card Expandable Content */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.project-details.expanded {
+    max-height: 500px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-out;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Decorative Patterns */
+.pattern-dots-1 {
+    background-image: radial-gradient(#DDAA33 1px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.1;
+}
+
+.pattern-grid-1 {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+.pattern-triangle-1 {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L20 20H0L10 0Z' fill='%23DDAA33' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 20px 20px;
+}
+
+/* New decorative animations */
+@keyframes rotate3d {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.animate-rotate-3d {
+    animation: rotate3d 10s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
