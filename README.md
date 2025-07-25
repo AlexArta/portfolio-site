@@ -2,7 +2,7 @@
 
 > Modern React portfolio website showcasing my frontend development skills
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)]([https://your-portfolio.vercel.app](https://portfolio-site-nu-ten-63.vercel.app/))
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)]([https://portfolio-site-nu-ten-63.vercel.app/))
 [![GitHub](https://img.shields.io/badge/📁_GitHub-Repository-black?style=for-the-badge)](https://github.com/AlexArta/portfolio)
 [![React](https://img.shields.io/badge/⚛️_React-19.1.0-61DAFB?style=for-the-badge)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/⚡_Vite-7.0.4-646CFF?style=for-the-badge)](https://vitejs.dev/)
