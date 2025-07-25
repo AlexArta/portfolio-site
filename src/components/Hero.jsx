@@ -78,7 +78,7 @@ const Hero = () => {
             <span className="block hero-text-accent">PORTFOLIO</span>
           </h1>
           <div className="mt-4 text-white text-lg md:text-xl font-medium">
-            <p>TG: <span className="text-accent">@Cofthonelev</span></p>
+            <p>TG: <span className="text-accent">@Coffeonelovee</span></p>
             <p>
               GitHub: {' '}
               <a 
