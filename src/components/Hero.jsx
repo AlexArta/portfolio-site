@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import firstPhotoHero from '../assets/first-photo-hero.jpg'
 
 const Hero = () => {
   const heroRef = useRef(null)
@@ -61,10 +62,11 @@ const Hero = () => {
         className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto reveal-element"
       >
         <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden shadow-lg mb-8 md:mb-0 md:mr-12">
-          {/* Замените src на актуальный путь к изображению */}
-          <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-600 text-sm">Profile Image</span>
-          </div>
+          <img 
+            src={firstPhotoHero} 
+            alt="Александер - Frontend Developer" 
+            className="w-full h-full object-cover"
+          />
           {/* Decorative circles */}
           <span className="absolute -bottom-2 -left-2 w-6 h-6 bg-accent rounded-full"></span>
           <span className="absolute top-4 right-4 w-4 h-4 bg-accent rounded-full"></span>

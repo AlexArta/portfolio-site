@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import RevealElement from './RevealElement'
+import secondPhotoAbout from '../assets/second-photo-about.jpg'
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
       id="about" 
       className="relative py-8 md:py-16 px-4 md:px-8 bg-gray-50 w-full flex flex-col items-center overflow-hidden"
     >
-      <h2 className="section-title-bg top-1/2 -translate-y-1/2">HELLO</h2>
+      <h2 className="section-title-bg top-1/2 -translate-y-1/2">Привет</h2>
       
       {/* Decorative elements */}
       <span className="absolute top-[5%] right-[10%] w-16 h-16 bg-accent rounded-xl transform rotate-12 opacity-30 animate-float" style={{animationDelay: '0.1s'}}></span>
@@ -22,7 +23,7 @@ const About = () => {
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 pt-12">
         <RevealElement className="lg:w-1/2 text-center lg:text-left">
           <h3 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-            HELLO,<br />I'M ALEX!
+            Привет,<br />Я Александер!
           </h3>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             Я стремлюсь занять позицию Junior Frontend Developer, где смогу применить свои навыки в проектах. 
@@ -51,7 +52,7 @@ const About = () => {
                 </p>
                 <p className="text-gray-700 flex items-center gap-2">
                   <span className="w-2 h-2 bg-accent rounded-full"></span>
-                  Телефон: +7 (XXX) XXX-XX-XX
+                  Телефон: +7 (915) 341-43-78
                 </p>
               </div>
             </div>
@@ -61,9 +62,11 @@ const About = () => {
 
         <RevealElement className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden shadow-xl mt-8 lg:mt-0">
           {/* Replace with actual photo path */}
-          <div className="w-full h-full bg-gray-300 flex items-center justify-center rounded-xl">
-            <span className="text-gray-600 text-sm">Alex Photo</span>
-          </div>
+          <img 
+            src={secondPhotoAbout} 
+            alt="Александер - Фото разработчика" 
+            className="w-full h-full object-cover rounded-xl"
+          />
           {/* Decorative element */}
           <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent rounded-xl transform rotate-12 -z-10"></div>
         </RevealElement>
