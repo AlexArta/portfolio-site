@@ -107,7 +107,7 @@ const projects = [
 ## 📞 Contact
 
 - **Email:** [scorpionsasa65@gmail.com](mailto:scorpionsasa65@gmail.com)
-- **Telegram:** [@Cofthonelev](https://t.me/Cofthonelev)
+- **Telegram:** [@Coffeonelovee](https://t.me/Coffeonelovee)
 - **GitHub:** [AlexArta](https://github.com/AlexArta)
 
 ## 🤝 Contributing
