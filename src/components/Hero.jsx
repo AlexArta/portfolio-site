@@ -90,6 +90,17 @@ const Hero = () => {
                 AlexArta
               </a>
             </p>
+            <p>
+              HH.ru: {' '}
+              <a 
+                href="https://hh.ru/resume/f4baada5ff0f1dc7330039ed1f595166693039" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                Мое резюме
+              </a>
+            </p>
           </div>
         </div>
       </div>

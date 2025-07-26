@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { useModalContext } from '../contexts/ModalContext'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { openModal } = useModalContext()
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -55,7 +53,7 @@ const Header = () => {
             Навыки
           </button>
           <button 
-            onClick={openModal}
+            onClick={() => scrollToSection('social')}
             className="px-4 py-2 bg-accent rounded-lg hover:bg-accent-dark transition-colors duration-300"
           >
             Связаться
@@ -95,10 +93,7 @@ const Header = () => {
             Навыки
           </button>
           <button 
-            onClick={() => {
-              openModal()
-              closeMobileMenu()
-            }}
+            onClick={() => scrollToSection('social')}
             className="block w-full text-right text-white py-2 px-4 bg-accent rounded-lg hover:bg-accent-dark transition-colors duration-300 mt-2"
           >
             Связаться
