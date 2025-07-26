@@ -1,0 +1,354 @@
+/* About.css */
+
+/* Define CSS Variables (reusing from previous components where applicable) */
+:root {
+  /* Colors */
+  --color-primary: #1a202c; /* Or your actual primary dark color */
+  --color-accent: #61dafb; /* React blue or similar vibrant accent */
+  --color-accent-dark: #4dafe2;
+  --color-gray-50: #f9fafb;
+  --color-gray-300: #d1d5db;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Opacity variables */
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+
+  /* Spacing */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-16: 4rem; /* 64px */
+
+  /* Font Sizes */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 3.75rem; /* 60px */
+
+  /* Border Radius */
+  --border-radius-xl: 0.75rem; /* 12px */
+  --border-radius-full: 9999px;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: var(--opacity-40); }
+  50% { opacity: var(--opacity-20); }
+}
+
+/* --- */
+
+/* About Section */
+.about-section {
+  position: relative;
+  padding: var(--spacing-8) var(--spacing-4);
+  background-color: var(--color-gray-50);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
+}
+
+/* Decorative elements (floating shapes) */
+.decorative-shape {
+  position: absolute;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-xl); /* Default to xl, override for full */
+  opacity: var(--opacity-30); /* Default opacity, override as needed */
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Specific shape sizes, positions, rotations, and delays */
+.shape-1 {
+  top: 5%;
+  right: 10%;
+  width: 4rem; /* w-16 */
+  height: 4rem; /* h-16 */
+  transform: rotate(12deg);
+  animation-delay: 0.1s;
+}
+
+.shape-2 {
+  bottom: 5%;
+  left: 10%;
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
+  border-radius: var(--border-radius-full);
+  opacity: var(--opacity-20);
+  animation-delay: 0.3s;
+}
+
+.shape-3 {
+  top: 30%;
+  left: 5%;
+  width: 2rem; /* w-8 */
+  height: 2rem; /* h-8 */
+  border-radius: var(--border-radius-full);
+  opacity: var(--opacity-40);
+  animation: pulse 3s ease-in-out infinite; /* Specific pulse animation */
+  animation-delay: 0.2s;
+}
+
+.shape-4 {
+  bottom: 30%;
+  right: 5%;
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  transform: rotate(6deg);
+  opacity: var(--opacity-25);
+  animation-delay: 0.5s;
+}
+
+.shape-5 {
+  top: 70%;
+  left: 20%;
+  width: 3.5rem; /* w-14 */
+  height: 3.5rem; /* h-14 */
+  border-radius: var(--border-radius-full);
+  opacity: var(--opacity-30);
+  animation-delay: 0.7s;
+}
+
+.shape-6 {
+  top: 15%;
+  right: 30%;
+  width: 2.25rem; /* w-9 */
+  height: 2.25rem; /* h-9 */
+  transform: rotate(-20deg);
+  opacity: var(--opacity-20);
+  animation-delay: 0.9s;
+}
+
+/* --- */
+
+/* Background pattern */
+.pattern-triangle-1 {
+  position: absolute;
+  inset: 0; /* top, right, bottom, left: 0 */
+  /* Placeholder for triangle pattern - you'd typically use an SVG or a more complex CSS pattern here */
+  /* For simplicity, if this was a Tailwind pattern, it implies a background-image or specific gradients */
+  /* Assuming this was a complex pattern, for now, it's just a placeholder */
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.02) 75%, rgba(0,0,0,0.02)), linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.02) 75%, rgba(0,0,0,0.02));
+  background-size: 40px 40px; /* Adjust size as needed */
+  background-position: 0 0, 20px 20px; /* Adjust position as needed */
+}
+
+/* --- */
+
+/* Main content wrapper */
+.about-content-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem; /* max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-12);
+  padding-top: var(--spacing-12);
+}
+
+@media (min-width: 1024px) {
+  .about-content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* About Text Column */
+.about-text-column {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .about-text-column {
+    width: 50%; /* lg:w-1/2 */
+    text-align: left;
+  }
+}
+
+.about-heading {
+  font-size: var(--font-size-3xl);
+  font-weight: 800; /* font-extrabold */
+  color: var(--color-gray-900);
+  line-height: 1.25; /* leading-tight */
+  margin-bottom: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-heading {
+    font-size: var(--font-size-6xl);
+  }
+}
+
+.about-paragraph {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  line-height: 1.625; /* leading-relaxed */
+  margin-bottom: var(--spacing-4);
+}
+
+.about-paragraph:last-of-type {
+  margin-bottom: var(--spacing-8);
+}
+
+/* --- */
+
+/* Contact Information Card */
+.contact-card {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(var(--color-accent), var(--opacity-10)), rgba(var(--color-accent), var(--opacity-5)));
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+  text-align: left;
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(var(--color-accent), var(--opacity-20));
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); /* shadow-lg */
+  overflow: hidden;
+}
+
+.contact-card-decoration-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem; /* w-16 */
+  height: 4rem; /* h-16 */
+  background-color: rgba(var(--color-accent), var(--opacity-10));
+  border-radius: var(--border-radius-full);
+  transform: translateX(2rem) translateY(-2rem); /* translate-x-8 -translate-y-8 */
+}
+
+.contact-card-content {
+  position: relative;
+  z-index: 10;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.contact-header svg {
+  width: 1.25rem; /* w-5 */
+  height: 1.25rem; /* h-5 */
+  color: var(--color-accent);
+}
+
+.contact-header h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600; /* font-semibold */
+  color: var(--color-accent);
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.contact-info-item {
+  color: var(--color-gray-700);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.contact-info-dot {
+  width: 0.5rem; /* w-2 */
+  height: 0.5rem; /* h-2 */
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-full);
+}
+
+/* --- */
+
+/* About Image Section */
+.about-image-wrapper {
+  position: relative;
+  width: 16rem; /* w-64 */
+  height: 16rem; /* h-64 */
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); /* shadow-xl */
+  margin-top: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .about-image-wrapper {
+    width: 20rem; /* w-80 */
+    height: 20rem; /* h-80 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-image-wrapper {
+    margin-top: 0; /* lg:mt-0 */
+  }
+}
+
+.about-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-xl);
+}
+
+.about-image-placeholder span {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.about-image-decoration {
+  position: absolute;
+  bottom: -1rem; /* -bottom-4 */
+  right: -1rem; /* -right-4 */
+  width: 6rem; /* w-24 */
+  height: 6rem; /* h-24 */
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-xl);
+  transform: rotate(12deg);
+  z-index: -10; /* -z-10 */
+}

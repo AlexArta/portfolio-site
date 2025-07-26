@@ -1,0 +1,204 @@
+/* Social Component Styles */
+
+.social-section {
+    position: relative;
+    background-color: #f9fafb;
+    padding: 5rem 1rem;
+    overflow: hidden;
+}
+
+.social-background {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+}
+
+.social-bg-decoration-1 {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: #DDAA33;
+    border-radius: 50%;
+    filter: blur(2rem);
+}
+
+.social-bg-decoration-2 {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: #1E1E1E;
+    border-radius: 50%;
+    filter: blur(2rem);
+}
+
+.social-bg-decoration-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+    background-color: #DDAA33;
+    border-radius: 50%;
+    filter: blur(4rem);
+    opacity: 0.05;
+}
+
+.social-container {
+    position: relative;
+    z-index: 10;
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-header {
+    margin-bottom: 3rem;
+}
+
+.social-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1E1E1E;
+    margin-bottom: 1rem;
+}
+
+.social-description {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    border: 2px solid transparent;
+}
+
+.social-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: #DDAA33;
+}
+
+.social-card-icon {
+    margin-bottom: 1rem;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-card-icon {
+    transform: scale(1.1);
+}
+
+.social-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.social-card-description {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.social-card:hover .social-card-description {
+    opacity: 1;
+}
+
+/* Цвета для каждой социальной сети */
+.social-card-telegram {
+    background-color: #3b82f6;
+}
+
+.social-card-telegram:hover {
+    background-color: #2563eb;
+}
+
+.social-card-github {
+    background-color: #1f2937;
+}
+
+.social-card-github:hover {
+    background-color: #111827;
+}
+
+.social-card-hh {
+    background-color: #ef4444;
+}
+
+.social-card-hh:hover {
+    background-color: #dc2626;
+}
+
+.social-card-email {
+    background-color: #10b981;
+}
+
+.social-card-email:hover {
+    background-color: #059669;
+}
+
+/* Анимация появления */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+    .social-section {
+        padding: 5rem 2rem;
+    }
+    
+    .social-title {
+        font-size: 3rem;
+    }
+    
+    .social-description {
+        font-size: 1.25rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .social-title {
+        font-size: 3.75rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

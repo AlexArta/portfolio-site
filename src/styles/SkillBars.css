@@ -1,0 +1,255 @@
+/* SkillBars.css */
+
+/* CSS Variables for colors and spacing */
+:root {
+  /* Common Colors (re-using from Projects.css if available) */
+  --color-primary: #3F5C4A;       /* Forest green - UPDATED */
+  --color-primary-dark: #2F4A38;  /* Dark green - UPDATED */
+  --color-accent: #DDAA33;        /* Golden accent - UPDATED */
+  --color-accent-dark: #C1952B;   /* Dark golden - UPDATED */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Skill Bar Specific Colors (unchanged as per request) */
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-400: #60a5fa;
+
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-400: #4ade80;
+
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+  --color-purple-400: #c084fc;
+
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-400: #f87171;
+
+  --color-indigo-500: #6366f1;
+  --color-indigo-600: #4f46e5;
+  --color-indigo-400: #818cf8;
+
+  /* Opacity variables */
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+
+  /* Spacing */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-16: 4rem; /* 64px */
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+
+  /* Border Radius */
+  --border-radius-full: 9999px;
+  --border-radius-lg: 0.5rem; /* 8px */
+  --border-radius-xl: 0.75rem; /* 12px */
+}
+
+/* Skill Bars Container */
+.skill-bars-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+}
+
+@media (min-width: 768px) {
+  .skill-bars-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-16);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Skill Card Base Styles */
+.skill-card {
+  position: relative;
+  /* Default accent gradient, now using the new golden accent */
+  background-image: linear-gradient(to bottom right, rgba(var(--color-accent), var(--opacity-20)), rgba(var(--color-accent), var(--opacity-10)));
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+  /* Default accent border, now using the new golden accent */
+  border: 1px solid rgba(var(--color-accent), var(--opacity-30));
+  backdrop-filter: blur(4px); /* backdrop-blur-sm */
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .skill-card {
+    padding: var(--spacing-4);
+    border-radius: var(--border-radius-xl);
+  }
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* Skill Card Color Modifiers (unchanged as per request) */
+.skill-card--blue {
+  background-image: linear-gradient(to bottom right, rgba(var(--color-blue-500), var(--opacity-20)), rgba(var(--color-blue-600), var(--opacity-10)));
+  border-color: rgba(var(--color-blue-400), var(--opacity-30));
+}
+
+.skill-card--green {
+  background-image: linear-gradient(to bottom right, rgba(var(--color-green-500), var(--opacity-20)), rgba(var(--color-green-600), var(--opacity-10)));
+  border-color: rgba(var(--color-green-400), var(--opacity-30));
+}
+
+.skill-card--purple {
+  background-image: linear-gradient(to bottom right, rgba(var(--color-purple-500), var(--opacity-20)), rgba(var(--color-purple-600), var(--opacity-10)));
+  border-color: rgba(var(--color-purple-400), var(--opacity-30));
+}
+
+.skill-card--red {
+  background-image: linear-gradient(to bottom right, rgba(var(--color-red-500), var(--opacity-20)), rgba(var(--color-red-600), var(--opacity-10)));
+  border-color: rgba(var(--color-red-400), var(--opacity-30));
+}
+
+.skill-card--indigo {
+  background-image: linear-gradient(to bottom right, rgba(var(--color-indigo-500), var(--opacity-20)), rgba(var(--color-indigo-600), var(--opacity-10)));
+  border-color: rgba(var(--color-indigo-400), var(--opacity-30));
+}
+
+/* Decorative Elements */
+.skill-card-decoration-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  background-color: rgba(var(--color-white), var(--opacity-5));
+  border-radius: var(--border-radius-full);
+  transform: translateX(1.5rem) translateY(-1.5rem); /* translate-x-6 -translate-y-6 */
+}
+
+.skill-card-decoration-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem; /* w-8 */
+  height: 2rem; /* h-8 */
+  background-color: rgba(var(--color-white), var(--opacity-5));
+  border-radius: var(--border-radius-full);
+  transform: translateX(-1rem) translateY(1rem); /* -translate-x-4 translate-y-4 */
+}
+
+/* Skill Card Content */
+.skill-card-content {
+  position: relative;
+  z-index: 10;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.skill-name-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.skill-dot {
+  width: 0.75rem; /* w-3 */
+  height: 0.75rem; /* h-3 */
+  border-radius: var(--border-radius-full);
+  background-color: rgba(var(--color-white), var(--opacity-80));
+}
+
+.skill-name {
+  font-weight: 600; /* font-semibold */
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 768px) {
+  .skill-name {
+    font-size: var(--font-size-base);
+  }
+}
+
+.skill-level-tag {
+  font-size: var(--font-size-xs);
+  color: rgba(var(--color-white), var(--opacity-90));
+  background-color: rgba(var(--color-white), var(--opacity-20));
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-full);
+  font-weight: 500; /* font-medium */
+}
+
+@media (min-width: 768px) {
+  .skill-level-tag {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Skill Bar */
+.skill-bar-container {
+  background-color: rgba(var(--color-white), var(--opacity-20));
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  height: 0.75rem; /* Default height for the bar track */
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: var(--border-radius-full);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* shadow-lg */
+  transition: width 1s ease-out; /* duration-1000 ease-out */
+  width: 0; /* Initial width */
+}
+
+/* Fill Colors for skill bars */
+.skill-bar-fill--accent {
+  /* Using the new golden accent gradient */
+  background-image: linear-gradient(to right, var(--color-accent), var(--color-accent-dark));
+}
+
+/* Other fill colors (unchanged as per request) */
+.skill-bar-fill--blue {
+  background-image: linear-gradient(to right, var(--color-blue-500), var(--color-blue-600));
+}
+
+.skill-bar-fill--green {
+  background-image: linear-gradient(to right, var(--color-green-500), var(--color-green-600));
+}
+
+.skill-bar-fill--purple {
+  background-image: linear-gradient(to right, var(--color-purple-500), var(--color-purple-600));
+}
+
+.skill-bar-fill--red {
+  background-image: linear-gradient(to right, var(--color-red-500), var(--color-red-600));
+}
+
+.skill-bar-fill--indigo {
+  background-image: linear-gradient(to right, var(--color-indigo-500), var(--color-indigo-600));
+}
+
+

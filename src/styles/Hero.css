@@ -1,0 +1,213 @@
+/* Hero Component Styles */
+
+.hero-section {
+    position: relative;
+    background-color: #3F5C4A;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 1rem;
+    padding-top: 5rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-image-dot-1 {
+    position: absolute;
+    bottom: -0.5rem;
+    left: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #DDAA33;
+    border-radius: 50%;
+}
+
+.hero-image-dot-2 {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #DDAA33;
+    border-radius: 50%;
+}
+
+.hero-text-container {
+    text-align: center;
+}
+
+.hero-contacts {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.hero-contact-item {
+    margin-bottom: 0.5rem;
+}
+
+.hero-contact-link {
+    color: #DDAA33;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.hero-contact-link:hover {
+    text-decoration: underline;
+}
+
+.hero-scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.hero-scroll-button {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-scroll-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+}
+
+/* Декоративные элементы */
+.hero-decoration {
+    position: absolute;
+    background-color: #DDAA33;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulse 2s infinite, float 4s ease-in-out infinite;
+}
+
+.hero-decoration-square {
+    border-radius: 0.75rem;
+    opacity: 0.2;
+    animation: rotate3d 10s linear infinite;
+}
+
+.hero-decoration-1 {
+    top: 10%;
+    left: 15%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.hero-decoration-2 {
+    bottom: 20%;
+    right: 10%;
+    width: 2rem;
+    height: 2rem;
+    animation-delay: 0.2s;
+}
+
+.hero-decoration-3 {
+    top: 30%;
+    left: 40%;
+    width: 6rem;
+    height: 6rem;
+    transform: rotate(45deg);
+}
+
+.hero-decoration-4 {
+    top: 5%;
+    right: 5%;
+    width: 1.5rem;
+    height: 1.5rem;
+    animation-delay: 0.4s;
+}
+
+.hero-decoration-5 {
+    bottom: 5%;
+    left: 5%;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: rotate(12deg);
+    animation-delay: 0.6s;
+}
+
+.hero-decoration-6 {
+    top: 60%;
+    left: 10%;
+    width: 4rem;
+    height: 4rem;
+    animation-delay: 0.8s;
+}
+
+.hero-decoration-7 {
+    bottom: 15%;
+    right: 30%;
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: rotate(-30deg);
+    animation-delay: 1s;
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 0 2rem;
+        padding-top: 5rem;
+    }
+    
+    .hero-content {
+        flex-direction: row;
+    }
+    
+    .hero-image-container {
+        width: 16rem;
+        height: 16rem;
+        margin-bottom: 0;
+        margin-right: 3rem;
+    }
+    
+    .hero-text-container {
+        text-align: left;
+    }
+    
+    .hero-contacts {
+        font-size: 1.25rem;
+    }
+}

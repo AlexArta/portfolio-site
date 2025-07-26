@@ -1,0 +1,115 @@
+/* Общие стили для всех компонентов */
+
+.text-primary {
+    color: #FFFFFF;
+}
+
+.bg-primary {
+    background-color: #1E1E1E;
+}
+
+.bg-accent {
+    background-color: #DDAA33;
+}
+
+.bg-blue {
+    background-color: #0000FF;
+}
+
+.text-accent {
+    color: #DDAA33;
+}
+
+.hover\:text-accent:hover {
+    color: #C1952B;
+}
+
+.hover\:bg-accent-dark:hover {
+    background-color: #C1952B;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.pt-20 {
+    padding-top: 5rem;
+}
+
+.md\:flex-row {
+    flex-direction: row;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.md\:text-xl {
+    font-size: 1.25rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
