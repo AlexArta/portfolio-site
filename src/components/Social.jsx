@@ -42,8 +42,8 @@ const Social = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:alexarta.dev@gmail.com',
-      description: 'alexarta.dev@gmail.com',
+      url: 'mailto:scorpionsasa65@gmail.com',
+      description: 'scorpionsasa65@gmail.com',
       cssClass: 'social-card-email',
       icon: (
         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
